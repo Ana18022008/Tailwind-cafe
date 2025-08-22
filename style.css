@@ -49,7 +49,7 @@ a{
 #header{
     padding: 1rem 0;
     width: 100%;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .header-inner{
@@ -108,25 +108,15 @@ a{
     font-weight: 600;
     display: inline-block;
 }
-*/
+
 .btn:hover{
     background: var(--hover-color);
     transition: 0.5s;
 }
 
+
 #products{
     padding: 5rem 0;
-}
-
-:root{
-    --primary-color: #8b4513;
-    --hover-color: #5C2E0F;
-    --text-dark: #333;
-    --text-muted: #555;
-    --background-color: #fff;
-    --light-color: #ffefdf;
-    --font-body: 'Poppins', sans-serif;
-    --font-logo: 'Pacifico' , cursive;
 }
 
 
@@ -143,11 +133,13 @@ a{
     color: var(--text-muted);
 }
 
+
 .grid{
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
 }
+
 
 .card{
     background-color: var(--light-color);
@@ -155,6 +147,7 @@ a{
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     overflow: hidden;
 }
+
 
 .card-body{
     padding: 1.5rem;
@@ -166,21 +159,24 @@ a{
     margin-bottom: 0.5rem;
 }
 
+
 .card-body p{
     color: var(--text-muted);
     margin-bottom: 1rem;
 
 }
 
-.card-body .price{
+.card-body span{
     font-weight: 600;
     color: var(--primary-color);
 }
+
 
 #contact{
     background-color: var(--light-color);
     padding: 4rem 0;
 }
+
 
 .contact-box{
     background-color: #fff;
@@ -189,6 +185,7 @@ a{
     display: flex;
     flex-direction: column;
 }
+
 
 .contact-text{
     padding: 2rem;
@@ -206,6 +203,7 @@ a{
     margin-bottom: 0.5rem;
 }
 
+
 .adress{
     margin: 2rem 0;
 }
@@ -214,100 +212,114 @@ a{
     color: var(--text-muted)
 }
 
-.contact-img img{
+.contactImg{
+    display: flex;
+    justify-content: center;
+}
+
+.contactImg img{
     width: 100%;
     height: auto;
+    object-fit: cover;
+    display: block;
 }
 
 #footer{
-    background: var(--text-dark);
-    color:#fff;
+    background: var(--textDark);
+    color: #fff;
     padding: 2rem 0;
     text-align: center;
 }
 
-.footer-inner{
+.footerInner{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
 }
 
-.footer-brand p {
+
+.footerBrand p{
     font-size: 0.9rem;
 }
 
-.footer-brand h3{
+.footerBrand h3{
     color: #fff;
     font-size: 1.5rem;
     font-weight: 600;
 }
 
-.social-icons{
+.socialIcons{
     display: flex;
     justify-content: center;
     gap: 1rem;
     margin-bottom: 0.5rem;
 }
 
-.social-icons img{
+.socialIcons img{
     width: 16px;
     height: 16px;
 }
 
-.footer-social p{
+.socialSocial p{
     font-size: 0.9rem;
 }
 
-@media(min-width: 768px){
-    .menu-desktop{
+
+@media (min-width: 768px){
+    .menuDesktop{
         display: flex;
         justify-content: flex-end;
         align-items: center;
-        gap: 1rem;
+        gap: 1.5rem;
     }
 
-    #menu-mobile{
+    #menuMobile{
         display: none;
     }
 
-    .menu-desktop li a:hover{
-        color: var(--primary-color);
+    .menuDesktop li a:hover{
+        color: var(--primaryColor);
     }
 
-    .menu-desktop li{
+    .menuDesktop li{
         list-style: none;
     }
 
     .grid{
-        display: grid;
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .contact-box{
+    .contactBox{
         flex-direction: row;
+        height: 500px;
     }
-
-    .contact-img{
-        flex:1;
-    }
-    
-    .contact-text{
-        flex:1;
-    }
-
-    .footer-inner{
+*/
+    .footerInner{
         flex-direction: row;
         justify-content: space-between;
         text-align: left;
     }
 
+    .col{
+        flex: 1 1 50%;
+        box-sizing: border-box;
+    }
 
-}
 
-@media(min-width: 1024px){
+@media (min-width: 1024px){
     .grid{
         grid-template-columns: repeat(4, 1fr);
     }
+}
 
+:root{
+    --primaryColor: #8b4513;
+    --hoverColor: #5C2E0F; amarelo 800
+    --textDark: #333;
+    --textMuted: #555;
+    --backgroundColor: #fff;
+    --lightColor: #ffe0d0;
+    --fontBody: 'Poppins', sans-serif;
+    --fontLogo: 'Pacifico', cursive;
 }
